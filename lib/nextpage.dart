@@ -8,7 +8,7 @@ class NextPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             const SizedBox(
@@ -16,12 +16,29 @@ class NextPage extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: const Text(
-                'Travel',
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.w600,
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      size: 40,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'Travel',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -76,7 +93,7 @@ class NextPage extends StatelessWidget {
                   ),
                 ],
               ),
-              height: 250,
+              height: 200,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
@@ -144,6 +161,145 @@ class NextPage extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: const [
+                Text(
+                  'Favourites ',
+                  style: TextStyle(
+                    color: Color(0xFF141352),
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 250,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(13),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0xFF1A175E),
+                              offset: Offset(3, 3),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/image/IMG_0021.jpg',
+                              width: 100,
+                              height: 100,
+                            ),
+                            Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        Icon(Icons.tour),
+                                        Text("Gyeongbokgung"),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Icon(Icons.pin_drop),
+                                        Text("South Korea"),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 250,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(13),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0xFF1A175E),
+                              offset: Offset(3, 3),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/image/IMG_0021.jpg',
+                              width: 100,
+                              height: 100,
+                            ),
+                            Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        Icon(Icons.tour),
+                                        Text("Gyeongbokgung"),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Icon(Icons.pin_drop),
+                                        Text("South Korea"),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),
